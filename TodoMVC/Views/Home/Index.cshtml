@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Progressive Enhancement with ASP.NET and React</title>
+    <style>h1,ul{margin:0}.filter,h1{text-align:center}body{width:550px;background:#f5f5f5;margin:0 auto;font:14px 'Helvetica Neue',Helvetica,Arial,sans-serif}h1{font-size:100px;font-weight:100;color:#af2f2f;color:rgba(175,47,47,.15)}ul{padding:0;list-style:none;background:#fff;box-shadow:0 2px 4px 0 rgba(0,0,0,.2),0 25px 50px 0 rgba(0,0,0,.1)}.list li{font-size:24px;border-bottom:1px solid #ededed;padding:15px 60px 15px 15px}.list li.completed{color:#d9d9d9;text-decoration:line-through}.filter{color:#777;padding:10px 15px;height:20px}.filter li{display:inline}.filter li a{color:inherit;margin:3px;padding:3px 7px;text-decoration:none;border:1px solid #fff;border-radius:3px}.filter li a:hover{border-color:#af2f2f;border-color:rgba(175,47,47,.1)}</style>
+</head>
+<body>
+    <h1>todos</h1>
+    <div id="content">@Html.Raw(ViewBag.List)</div>
+    <script>
+        var todos = @Html.Raw(new JavaScriptSerializer().Serialize(ViewBag.Todos));
+        if (window.history && window.history.pushState) {
+            var script = document.createElement('script');
+            script.src = "/Scripts/bundle.js";
+            document.body.appendChild(script);
+        }
+    </script>
+</body>
+</html>

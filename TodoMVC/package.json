@@ -1,0 +1,22 @@
+{
+  "name": "todomvc",
+  "version": "1.0.0",
+  "description": "Progressive Enhancement with ASP.NET and React",
+  "dependencies": {
+    "navigation": "^1.1.0",
+    "navigation-react": "^1.1.0",
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2"
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.1.2",
+    "browserify": "^12.0.1",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "transpile": "gulp transpile",
+    "bundle": "gulp bundle"
+  }
+}
